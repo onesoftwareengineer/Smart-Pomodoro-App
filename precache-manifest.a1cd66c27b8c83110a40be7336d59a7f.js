@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a13c88cca60133453dfea40c9f85ebc2",
+    "revision": "876dae93d9140c9044ffa539eed33e1d",
     "url": "/Smart-Pomodoro-App/index.html"
   },
   {
