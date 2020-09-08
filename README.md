@@ -1,13 +1,14 @@
-# `Work in progress`
-- work - pause integration will be added
-- local storage usage will be added
-- toggle sound on / off icon and functionality will be added
-- favicon will be added
-- browser tab pomodoro status will be added
-- front-end navbar / signup / sign in will be added
-- rest api (node based) will be added
-- rewards screen will be added 
-- comments to the readme file with screenshots will be added
+# `Work in progress - todo list:`
+- timeleft state variable to be removed for both break and pomodoro components
+- work - pause modal integration
+- local storage usage
+- toggle sound on / off icon and functionality
+- favicon
+- browser tab pomodoro status
+- front-end navbar / signup / sign
+- rest api (node based)
+- rewards screen
+- comments to the readme file with screenshots
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
