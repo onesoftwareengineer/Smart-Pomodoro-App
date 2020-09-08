@@ -5,7 +5,7 @@ import doneWav from '../sounds/sunny.wav'
 class Pomodoro extends Component {
     state = {
       isOpen: true,
-      pomodoroTime: 5,
+      pomodoroTime: this.props.time*60,
       timeLeft: this.props.time*60,
       audio: new Audio('./')
     }

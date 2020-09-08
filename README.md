@@ -1,18 +1,16 @@
 # `Work in progress - todo list:`
 - timeleft state variable to be removed for both break and pomodoro components
-- work - pause modal integration
 - local storage usage
 - toggle sound on / off icon and functionality
 - add / remove / daily activities
 - host app on github pages
-- favicon
 - browser tab pomodoro status like LIVE / BREAK / GET TO WORK
 - front-end navbar / signup / sign
 - add back-end rest api (node based)
 - host full-stack app on hosting account
 - rewards screen
 - comments to the readme file with screenshots
-
+- favicon, buy on fiverr
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
