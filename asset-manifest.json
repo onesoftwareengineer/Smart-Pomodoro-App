@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/Smart-Pomodoro-App/static/js/main.a906cb1e.chunk.js",
+    "main.js.map": "/Smart-Pomodoro-App/static/js/main.a906cb1e.chunk.js.map",
+    "runtime-main.js": "/Smart-Pomodoro-App/static/js/runtime-main.49512bfc.js",
+    "runtime-main.js.map": "/Smart-Pomodoro-App/static/js/runtime-main.49512bfc.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/Smart-Pomodoro-App/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.c1c9aa17.chunk.js": "/Smart-Pomodoro-App/static/js/2.c1c9aa17.chunk.js",
+    "static/js/2.c1c9aa17.chunk.js.map": "/Smart-Pomodoro-App/static/js/2.c1c9aa17.chunk.js.map",
+    "index.html": "/Smart-Pomodoro-App/index.html",
+    "precache-manifest.079f0b641dbce69a10bd1f4ca0eb6d3b.js": "/Smart-Pomodoro-App/precache-manifest.079f0b641dbce69a10bd1f4ca0eb6d3b.js",
+    "service-worker.js": "/Smart-Pomodoro-App/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/Smart-Pomodoro-App/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/js/2.c1c9aa17.chunk.js.LICENSE.txt": "/Smart-Pomodoro-App/static/js/2.c1c9aa17.chunk.js.LICENSE.txt",
+    "static/media/school.wav": "/Smart-Pomodoro-App/static/media/school.6bc38242.wav",
+    "static/media/sunny.wav": "/Smart-Pomodoro-App/static/media/sunny.4cc18d72.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49512bfc.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.c1c9aa17.chunk.js",
+    "static/js/main.a906cb1e.chunk.js"
+  ]
+}
