@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a8958e793f1c650e3bc407ae8aaecb61",
+    "revision": "a5c97f6396609fbe1573e99aba337dd1",
     "url": "/Smart-Pomodoro-App/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Smart-Pomodoro-App/static/js/2.c1c9aa17.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d01ea8bd3b79228715c0",
-    "url": "/Smart-Pomodoro-App/static/js/main.41f5e1cf.chunk.js"
+    "revision": "4d54f2d539fbb45cd0f7",
+    "url": "/Smart-Pomodoro-App/static/js/main.e5256ad8.chunk.js"
   },
   {
     "revision": "a4bff59064fefc462e78",
