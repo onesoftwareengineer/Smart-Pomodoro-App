@@ -1,7 +1,7 @@
 # `Work in progress`
 - work - pause integration will be added
 - local storage usage will be added
-- toggle sound on / of will be added
+- toggle sound on / off icon and functionality will be added
 - favicon will be added
 - browser tab pomodoro status will be added
 - front-end navbar / signup / sign in will be added
