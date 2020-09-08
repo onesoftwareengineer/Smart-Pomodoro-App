@@ -47,7 +47,7 @@ class App extends Component {
         },        
       ],
       todaysReward: 0,
-      maxReward: 80/7,
+      maxReward: 80/7/2,
       pomodoroRunning: false,
       pomodoroIndex: undefined,
       pomodoroTime: 30,
