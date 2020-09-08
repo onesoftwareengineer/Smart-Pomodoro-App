@@ -3,10 +3,13 @@
 - work - pause modal integration
 - local storage usage
 - toggle sound on / off icon and functionality
+- add / remove / daily activities
+- host app on github pages
 - favicon
-- browser tab pomodoro status
+- browser tab pomodoro status like LIVE / BREAK / GET TO WORK
 - front-end navbar / signup / sign
-- rest api (node based)
+- add back-end rest api (node based)
+- host full-stack app on hosting account
 - rewards screen
 - comments to the readme file with screenshots
 
