@@ -65,6 +65,7 @@ class App extends Component {
       todaysReward, 
       activities,
       pomodoroRunning: false, 
+      pauseRunning: true,
       pomodoroIndex: undefined,
       pomodorosDoneToday})
   }
