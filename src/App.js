@@ -19,13 +19,7 @@ class App extends Component {
           title: "Problem solving",
           description: "Solve problems, algorithms on Codility, HackerRank and other similar sites.",
           photo: "https://www.codility.com/wp-content/uploads/2020/03/CodilitySocial.jpg",
-          time: 150
-        },
-        {
-          title: "Build web app",
-          description: "Build apps with React mainly.",
-          photo: "https://i.ytimg.com/vi/NO2DaxhoWHk/maxresdefault.jpg",
-          time: 120
+          time: 60
         },
         {
           title: "Learn JavaScript",
@@ -34,10 +28,16 @@ class App extends Component {
           time: 60
         },
         {
-          title: "Learn React",
+          title: "React",
+          description: "Review React theory directly from docs, tutorial and guides. Build React apps.",
+          photo: "https://i.ytimg.com/vi/NO2DaxhoWHk/maxresdefault.jpg",
+          time: 180
+        },        
+        {
+          title: "Node DBs APIs",
           description: "Review React theory directly from React docs, tutorial and guides.",
-          photo: "https://hackernoon.com/hn-images/1*h8d-4wYLN9wwiEsLAA_5yg.jpeg",
-          time: 60
+          photo: "https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/15921/secure-rest-api-in-nodejs-18f43b3033c239da5d2525cfd9fdc98f.png",
+          time: 120
         },
         {
           title: "Apply to jobs",

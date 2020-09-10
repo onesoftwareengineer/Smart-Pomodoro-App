@@ -1,4 +1,6 @@
 # `Work in progress - todo list:`
+- remove take a break button on first page
+- add header and rewards page link
 - timeleft state variable to be removed for both break and pomodoro components
 - local storage usage
 - toggle sound on / off icon and functionality
