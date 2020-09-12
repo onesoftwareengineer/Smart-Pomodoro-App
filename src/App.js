@@ -7,45 +7,15 @@ import Activity from './components/Activity'
 import Header from './components/Header'
 import Pomodoro from './components/Pomodoro'
 import Break from './components/Break'
+import Navigation from './components/Navigation'
 
-// state: title / description / photo / time
+import {activities} from './data/user'
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      activities: [
-        {
-          title: "Problem solving",
-          description: "Solve problems, algorithms on Codility, HackerRank and other similar sites.",
-          photo: "https://www.codility.com/wp-content/uploads/2020/03/CodilitySocial.jpg",
-          time: 60
-        },
-        {
-          title: "Learn JavaScript",
-          description: "Review JavaScript theory needed directly from mdn.",
-          photo: "https://www.ciara.world/images/javascript.png",
-          time: 60
-        },
-        {
-          title: "React",
-          description: "Review React theory directly from docs, tutorial and guides. Build React apps.",
-          photo: "https://i.ytimg.com/vi/NO2DaxhoWHk/maxresdefault.jpg",
-          time: 180
-        },        
-        {
-          title: "Node DBs APIs",
-          description: "Review React theory directly from React docs, tutorial and guides.",
-          photo: "https://bs-uploads.toptal.io/blackfish-uploads/blog/post/seo/og_image_file/og_image/15921/secure-rest-api-in-nodejs-18f43b3033c239da5d2525cfd9fdc98f.png",
-          time: 120
-        },
-        {
-          title: "Apply to jobs",
-          description: "Search for jobs on linkedin, talk with friends, apply.",
-          photo: "https://lh3.googleusercontent.com/z0gMa0aRAkLxjS-lVaSOO1Ygb48rttOcR5iRpgJPTM6_enkfeCuN37JWm_9qcHJaJw",
-          time: 30
-        },        
-      ],
+      activities: activities,
       todaysReward: 0,
       maxReward: 80/7/2,
       pomodoroRunning: false,
@@ -75,6 +45,7 @@ class App extends Component {
   render() {
     return (
       <>
+      <Navigation />
       {this.state.pauseRunning ? 
         <Break stop={() => this.setState({pauseRunning: false})} /> 
         : null}
@@ -89,13 +60,12 @@ class App extends Component {
       <Header  
         reward={this.state.todaysReward}
         pomodoros={this.state.pomodorosDoneToday} 
-        break={() => this.setState({pauseRunning: true})}
         />
       <Container>
         <Row>
         {this.state.activities.map( (element, index) => 
           element.time > 0 ? 
-          <Col sm={6} md={4} className="pb-4 px-4" key={index}>
+          <Col sm={6} md={4} className="pb-3 px-4" key={index}>
             <Activity 
               title={element.title} 
               description={element.description}

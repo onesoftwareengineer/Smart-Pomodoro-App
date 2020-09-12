@@ -3,37 +3,42 @@ import {Button, Modal, Image} from 'react-bootstrap'
 import doneWav from '../sounds/sunny.wav'
 
 class Pomodoro extends Component {
-    state = {
-      isOpen: true,
-      pomodoroTime: this.props.time*60,
-      timeLeft: this.props.time*60,
-      audio: new Audio('./')
-    }
-    
-    componentDidMount() {
-      this.startDate = new Date()
-      this.timerId = setInterval(
-        () => {
-          let timeLeft = this.state.pomodoroTime - 
-            Math.round((new Date() - this.startDate)/1000)
-          this.setState({timeLeft})
-          if(this.state.timeLeft < 1) 
-            clearInterval(this.timerId)
-        },  
-        1000
-      )
+    constructor(props) {
+      super(props)
+      this.state = {
+        timeLeft: this.props.time*60, //time left stored in seconds 
+      }
+      this.targetDate = Date.parse(new Date()) + this.props.time*60*1000 
     }
 
-    componentWillUnmount() {
-      	clearInterval(this.timerId)
+    componentDidMount() {
+      this.intervalId = setInterval( () => {
+        let timeLeft = ( this.targetDate - Date.parse(new Date()) )/1000
+        this.setState({timeLeft})
+        document.title = `${Math.round((timeLeft/(this.props.time*60))*100)}%`
+        if(timeLeft < 1) {
+          clearInterval(this.intervalId) 
+        }
+      }, 500) 
     }
+
+    componentWillUnmount() {clearInterval(this.intervalId)}
 
     render() {
+      const pomodoroIsRunning = this.state.timeLeft > 1
+      const playAudio = !pomodoroIsRunning ? <audio src={doneWav} autoPlay/> : null
+      const title = pomodoroIsRunning ? 
+        `${this.props.activity.title} - ${this.state.timeLeft} sec left` : 
+        `Hurray, job done !` 
+      const button = pomodoroIsRunning ? 
+        <Button variant="secondary" onClick={this.props.stop} className="">Stop</Button> : 
+        <Button variant="primary" onClick={this.props.finish}>Claim Reward</Button>
+
       return (
         <>
-          {this.state.timeLeft < 1 ? <audio src={doneWav} autoPlay/> : null}
+          { playAudio }
           <Modal
-            show={this.state.isOpen}
+            show={true}
             onHide={this.props.stop}
             backdrop="static"
             keyboard={false}
@@ -43,20 +48,18 @@ class Pomodoro extends Component {
           >
             <Modal.Header closeButton>
               <Modal.Title>
-                {this.props.activity.title} - {this.state.timeLeft > 0 ? `${this.state.timeLeft} sec left` : `Done`}
+                { title }
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <Image src={this.props.activity.photo} fluid className="mt-2 mb-3"/>
               <p>
-              {this.props.activity.description} If you get interrupted, whatever the reason is, click stop.
+                <strong>{`Focus on the following activity for ${this.props.time} minutes. If you defocus click stop: `}</strong>
+                { this.props.activity.description }
               </p>
             </Modal.Body>
             <Modal.Footer className="justify-content-start">
-              {this.state.timeLeft > 0 ? 
-                <Button variant="secondary" onClick={this.props.stop} className="">Stop</Button> 
-                : <Button variant="primary" onClick={this.props.finish}>Claim Reward</Button>
-              }
+              { button }
             </Modal.Footer>
           </Modal>
         </>

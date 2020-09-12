@@ -1,8 +1,8 @@
 # `Work in progress - todo list:`
-- remove take a break button on first page
-- add header and rewards page link
-- timeleft state variable to be removed for both break and pomodoro components
+- add Log in | Sign up or Welcome Daniel | Log out
 - local storage usage
+- add stats page
+- timeleft state variable to be removed for both break and pomodoro components
 - toggle sound on / off icon and functionality
 - add / remove / daily activities
 - host app on github pages
