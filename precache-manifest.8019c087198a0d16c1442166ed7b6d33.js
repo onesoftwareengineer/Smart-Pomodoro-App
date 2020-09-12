@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8ddee0db5d83140d385f74c77af8010a",
+    "revision": "79c8e45475fcbc726e99034ff2eda6b6",
     "url": "/Smart-Pomodoro-App/index.html"
   },
   {
-    "revision": "054a15a4f07fdd81b3ec",
+    "revision": "d6b6fbd151adc465d65f",
     "url": "/Smart-Pomodoro-App/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "054a15a4f07fdd81b3ec",
-    "url": "/Smart-Pomodoro-App/static/js/2.ad6f9516.chunk.js"
+    "revision": "d6b6fbd151adc465d65f",
+    "url": "/Smart-Pomodoro-App/static/js/2.b8a22c5c.chunk.js"
   },
   {
     "revision": "5ac48c47bb3912b14c2d8de4f56d5ae8",
-    "url": "/Smart-Pomodoro-App/static/js/2.ad6f9516.chunk.js.LICENSE.txt"
+    "url": "/Smart-Pomodoro-App/static/js/2.b8a22c5c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "643eee183b4a9ce8fc35",
-    "url": "/Smart-Pomodoro-App/static/js/main.fc61deac.chunk.js"
+    "revision": "b74b1f6b43ac943c144d",
+    "url": "/Smart-Pomodoro-App/static/js/main.b6cba999.chunk.js"
   },
   {
     "revision": "a4bff59064fefc462e78",
