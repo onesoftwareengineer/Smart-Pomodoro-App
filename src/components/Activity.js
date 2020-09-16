@@ -10,7 +10,7 @@ function Activity(props) {
             <Card.Text>
                 {props.description}
             </Card.Text>
-            {/* <Button variant="primary" onClick={props.click}>Start</Button> */}
+            {/* <Button variant="primary" className="blueColor">Start</Button> */}
         </Card.Body>
         </Card>
     )

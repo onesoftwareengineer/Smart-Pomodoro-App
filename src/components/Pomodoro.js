@@ -12,6 +12,10 @@ class Pomodoro extends Component {
     }
 
     componentDidMount() {
+      const audio = new Audio(doneWav)
+      audio.muted = true
+      audio.play()
+
       this.intervalId = setInterval( () => {
         let timeLeft = ( this.targetDate - Date.parse(new Date()) )/1000
         this.setState({timeLeft})
@@ -22,11 +26,20 @@ class Pomodoro extends Component {
       }, 500) 
     }
 
-    componentWillUnmount() {clearInterval(this.intervalId)}
+    componentWillUnmount() {
+      clearInterval(this.intervalId)
+    }
+
+    componentDidUpdate() {
+      const pomodoroIsRunning = this.state.timeLeft > 1
+      var audio = new Audio(doneWav)
+
+      if(!pomodoroIsRunning) 
+        audio.play()
+    }
 
     render() {
       const pomodoroIsRunning = this.state.timeLeft > 1
-      const playAudio = !pomodoroIsRunning ? <audio src={doneWav} autoPlay/> : null
       const title = pomodoroIsRunning ? 
         `${this.props.activity.title} - ${this.state.timeLeft} sec left` : 
         `Hurray, job done !` 
@@ -36,7 +49,6 @@ class Pomodoro extends Component {
 
       return (
         <>
-          { playAudio }
           <Modal
             show={true}
             onHide={this.props.stop}
@@ -68,3 +80,6 @@ class Pomodoro extends Component {
 }
 
 export default Pomodoro
+
+
+

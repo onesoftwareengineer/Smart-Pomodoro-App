@@ -9,7 +9,7 @@ import Pomodoro from './components/Pomodoro'
 import Break from './components/Break'
 import Navigation from './components/Navigation'
 
-import {activities} from './data/user'
+import {activities} from './data/activities'
 
 class App extends Component {
   constructor() {
@@ -22,7 +22,8 @@ class App extends Component {
       pomodoroIndex: undefined,
       pomodoroTime: 30,
       pomodorosDoneToday: 0,
-      pauseRunning: false 
+      pauseRunning: false,
+      loggedUser: ""
     }
   }
 
@@ -45,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <>
-      <Navigation />
+      <Navigation user={this.state.loggedUser} />
       {this.state.pauseRunning ? 
         <Break stop={() => this.setState({pauseRunning: false})} /> 
         : null}
