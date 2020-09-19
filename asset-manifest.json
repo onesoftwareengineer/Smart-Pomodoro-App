@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Smart-Pomodoro-App/static/css/main.568a45a6.chunk.css",
-    "main.js": "/Smart-Pomodoro-App/static/js/main.30bc896b.chunk.js",
-    "main.js.map": "/Smart-Pomodoro-App/static/js/main.30bc896b.chunk.js.map",
+    "main.js": "/Smart-Pomodoro-App/static/js/main.eb97e8d8.chunk.js",
+    "main.js.map": "/Smart-Pomodoro-App/static/js/main.eb97e8d8.chunk.js.map",
     "runtime-main.js": "/Smart-Pomodoro-App/static/js/runtime-main.49512bfc.js",
     "runtime-main.js.map": "/Smart-Pomodoro-App/static/js/runtime-main.49512bfc.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/Smart-Pomodoro-App/static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.5ba77d6a.chunk.js": "/Smart-Pomodoro-App/static/js/2.5ba77d6a.chunk.js",
     "static/js/2.5ba77d6a.chunk.js.map": "/Smart-Pomodoro-App/static/js/2.5ba77d6a.chunk.js.map",
     "index.html": "/Smart-Pomodoro-App/index.html",
-    "precache-manifest.50f5763ef1c4fb4549a26d2b25b54086.js": "/Smart-Pomodoro-App/precache-manifest.50f5763ef1c4fb4549a26d2b25b54086.js",
+    "precache-manifest.9b14ecae840194a9d4591833eae4584b.js": "/Smart-Pomodoro-App/precache-manifest.9b14ecae840194a9d4591833eae4584b.js",
     "service-worker.js": "/Smart-Pomodoro-App/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/Smart-Pomodoro-App/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.568a45a6.chunk.css.map": "/Smart-Pomodoro-App/static/css/main.568a45a6.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.5ba77d6a.chunk.js",
     "static/css/main.568a45a6.chunk.css",
-    "static/js/main.30bc896b.chunk.js"
+    "static/js/main.eb97e8d8.chunk.js"
   ]
 }
