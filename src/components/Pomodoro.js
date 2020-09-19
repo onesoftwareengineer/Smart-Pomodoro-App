@@ -13,7 +13,6 @@ class Pomodoro extends Component {
     componentDidMount() {
       this.audio.muted = true
       this.audio.play()
-
       this.intervalId = setInterval( () => {
         let timeLeft = ( this.targetDate - Date.parse(new Date()) )/1000
         this.setState({timeLeft})
@@ -78,6 +77,3 @@ class Pomodoro extends Component {
 }
 
 export default Pomodoro
-
-
-

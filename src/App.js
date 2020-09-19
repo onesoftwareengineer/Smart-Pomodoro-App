@@ -46,22 +46,29 @@ class App extends Component {
   render() {
     return (
       <>
+      {/* navigation bar */}
       <Navigation user={this.state.loggedUser} />
-      {this.state.pauseRunning ? 
-        <Break stop={() => this.setState({pauseRunning: false})} /> 
-        : null}
-      {this.state.pomodoroRunning ? 
+      {/* pause modal */}
+      {
+        this.state.pauseRunning ? 
+        <Break stop={() => this.setState({pauseRunning: false})} /> : null
+      }
+      {/* pomodoro modal */}
+      {
+        this.state.pomodoroRunning ? 
         <Pomodoro 
           finish={() => this.finishPomodoro(this.state.pomodoroIndex)}
           stop={this.stopPomodoro}
           activity={this.state.activities[this.state.pomodoroIndex]}
           time={this.state.pomodoroTime}
-        /> 
-        : null}
+        /> : null
+      }
+      {/* jumbotron */}
       <Header  
         reward={this.state.todaysReward}
         pomodoros={this.state.pomodorosDoneToday} 
         />
+      {/* activities */}
       <Container>
         <Row>
         {this.state.activities.map( (element, index) => 
@@ -77,7 +84,13 @@ class App extends Component {
           </Col> : null     
         )}
         </Row>
-      </Container>      
+      </Container>     
+       {/* footer */}
+       <Container className="pt-2 text-muted font-weight-light">
+          <p className="text-center">Inspired by Francesco Cirillo and B. F. Skinner, built by 
+            <a href="https://www.linkedin.com/in/danielstefans/" target="_blank" className="ml-1 text-primary">Onesoftwareengineer</a>
+          </p>
+       </Container>
       </>
     )
   }
