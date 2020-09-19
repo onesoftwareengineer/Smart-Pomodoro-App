@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/Smart-Pomodoro-App/static/css/main.568a45a6.chunk.css",
-    "main.js": "/Smart-Pomodoro-App/static/js/main.e6ba9d3f.chunk.js",
-    "main.js.map": "/Smart-Pomodoro-App/static/js/main.e6ba9d3f.chunk.js.map",
+    "main.js": "/Smart-Pomodoro-App/static/js/main.30bc896b.chunk.js",
+    "main.js.map": "/Smart-Pomodoro-App/static/js/main.30bc896b.chunk.js.map",
     "runtime-main.js": "/Smart-Pomodoro-App/static/js/runtime-main.49512bfc.js",
     "runtime-main.js.map": "/Smart-Pomodoro-App/static/js/runtime-main.49512bfc.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/Smart-Pomodoro-App/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.8c37176a.chunk.js": "/Smart-Pomodoro-App/static/js/2.8c37176a.chunk.js",
-    "static/js/2.8c37176a.chunk.js.map": "/Smart-Pomodoro-App/static/js/2.8c37176a.chunk.js.map",
+    "static/js/2.5ba77d6a.chunk.js": "/Smart-Pomodoro-App/static/js/2.5ba77d6a.chunk.js",
+    "static/js/2.5ba77d6a.chunk.js.map": "/Smart-Pomodoro-App/static/js/2.5ba77d6a.chunk.js.map",
     "index.html": "/Smart-Pomodoro-App/index.html",
-    "precache-manifest.3c2cbea108e98a4ecbd9ae560c6a266f.js": "/Smart-Pomodoro-App/precache-manifest.3c2cbea108e98a4ecbd9ae560c6a266f.js",
+    "precache-manifest.50f5763ef1c4fb4549a26d2b25b54086.js": "/Smart-Pomodoro-App/precache-manifest.50f5763ef1c4fb4549a26d2b25b54086.js",
     "service-worker.js": "/Smart-Pomodoro-App/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/Smart-Pomodoro-App/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.568a45a6.chunk.css.map": "/Smart-Pomodoro-App/static/css/main.568a45a6.chunk.css.map",
-    "static/js/2.8c37176a.chunk.js.LICENSE.txt": "/Smart-Pomodoro-App/static/js/2.8c37176a.chunk.js.LICENSE.txt",
+    "static/js/2.5ba77d6a.chunk.js.LICENSE.txt": "/Smart-Pomodoro-App/static/js/2.5ba77d6a.chunk.js.LICENSE.txt",
     "static/media/school.wav": "/Smart-Pomodoro-App/static/media/school.6bc38242.wav",
     "static/media/sunny.wav": "/Smart-Pomodoro-App/static/media/sunny.4cc18d72.wav"
   },
   "entrypoints": [
     "static/js/runtime-main.49512bfc.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.8c37176a.chunk.js",
+    "static/js/2.5ba77d6a.chunk.js",
     "static/css/main.568a45a6.chunk.css",
-    "static/js/main.e6ba9d3f.chunk.js"
+    "static/js/main.30bc896b.chunk.js"
   ]
 }

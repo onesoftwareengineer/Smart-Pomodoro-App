@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Smart-Pomodoro-App/precache-manifest.3c2cbea108e98a4ecbd9ae560c6a266f.js"
+  "/Smart-Pomodoro-App/precache-manifest.50f5763ef1c4fb4549a26d2b25b54086.js"
 );
 
 self.addEventListener('message', (event) => {
