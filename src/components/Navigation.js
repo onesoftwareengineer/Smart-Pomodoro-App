@@ -21,9 +21,9 @@ function Navigation (props) {
             <Navbar.Brand href="#home">Smart Pomodoro App</Navbar.Brand>  <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav d-flex">
             <Nav className="mr-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#home">Activities</Nav.Link>
-                <Nav.Link href="#features">Rewards</Nav.Link>
+                <Nav.Link href="#home">Rewards</Nav.Link>
+                <Nav.Link href="#features">Info</Nav.Link>
             </Nav>
             <Nav className="font-weight-light">
                 {loggedStatus}

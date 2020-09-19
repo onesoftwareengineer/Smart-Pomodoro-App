@@ -1,18 +1,23 @@
 # `Work in progress - todo list:`
-- add Log in | Sign up or Welcome Daniel | Log out
 - local storage usage
-- add stats page
-- timeleft state variable to be removed for both break and pomodoro components
-- toggle sound on / off icon and functionality
-- add / remove / daily activities
-- host app on github pages
+- add router to app
+- add rewards section to first page
+- front end for activities page
+- front end for rewards page
+- front end for info page
+- front end for log-in / sign-up / my account pages
+- change from minutes display to hours display since 1 pomodoro = 0,5 hours and 2 pomodoro = 1 hour
+
+- pause modal to be updated, deprecated state usage
 - browser tab pomodoro status like LIVE / BREAK / GET TO WORK
-- front-end navbar / signup / sign
+- toggle sound on / off icon and functionality
+
+- add stats page
+
 - add back-end rest api (node based)
 - host full-stack app on hosting account
-- rewards screen
 - comments to the readme file with screenshots
-- favicon, buy on fiverr
+- favicon, buy on fiverr and develop
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
