@@ -3,18 +3,16 @@ import {Button, Modal, Image} from 'react-bootstrap'
 import doneWav from '../sounds/sunny.wav'
 
 class Pomodoro extends Component {
-    constructor(props) {
-      super(props)
-      this.state = {
-        timeLeft: this.props.time*60, //time left stored in seconds 
-      }
-      this.targetDate = Date.parse(new Date()) + this.props.time*60*1000 
+    state = {
+      //time left stored in seconds 
+      timeLeft: this.props.time*60
     }
+    targetDate = Date.parse(new Date()) + this.props.time*60*1000 
+    audio = new Audio(doneWav)
 
     componentDidMount() {
-      const audio = new Audio(doneWav)
-      audio.muted = true
-      audio.play()
+      this.audio.muted = true
+      this.audio.play()
 
       this.intervalId = setInterval( () => {
         let timeLeft = ( this.targetDate - Date.parse(new Date()) )/1000
@@ -28,14 +26,14 @@ class Pomodoro extends Component {
 
     componentWillUnmount() {
       clearInterval(this.intervalId)
+      this.audio.pause()
     }
 
     componentDidUpdate() {
       const pomodoroIsRunning = this.state.timeLeft > 1
-      var audio = new Audio(doneWav)
-
       if(!pomodoroIsRunning) 
-        audio.play()
+        this.audio.muted = false
+        this.audio.play()
     }
 
     render() {
