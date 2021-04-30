@@ -8,8 +8,6 @@ const CustomStyles = createGlobalStyle`
     ${tw`antialiased`};
     ${tw`m-0 p-0`}
 	}
-
-  
 `
 
 const GlobalStyles = () => (
