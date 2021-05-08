@@ -12,3 +12,33 @@
 - lint staged - dupa
 
 **For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" or "@snowpack/plugin-parcel" to your `snowpack.config.json` config file.
+
+
+ai niste taskuri
+	poza
+	pomodoros
+    pomodoroPausedSecondsLeft
+	descriere
+    id
+
+active pomodoro
+    id: date | null
+    startedAtDate: date | null
+    start pomodoro()
+    stop pomodoro()
+
+cand se da click incepe un pomodoro
+	incepe animatia cu linia
+	countdown 25 de minute
+	cand se ajunge la 0 
+		se opreste animatia cu linia
+		se decrementeaza numarul de pomodoro-uri
+		se playeneste un sunet
+		se afiseaza o notificare
+
+user 
+	rewards (boolean)
+	notifications (boolean)
+	sound (boolean)
+
+
