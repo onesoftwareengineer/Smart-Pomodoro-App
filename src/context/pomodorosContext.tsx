@@ -28,7 +28,7 @@ export type individualPomodoroType = {
 }
 
 const initialState: pomodoroStateType = {
-    pomodorosPlannedToday: 0,
+    pomodorosPlannedToday: 21,
     pomodorosFinishedToday: 0,
     rewardCoinsToday: 0,
     pomodorosArray: [
@@ -84,7 +84,7 @@ type pomodoroActionType = {
 
 function reducer(state: pomodoroStateType, action: pomodoroActionType): pomodoroStateType {
     switch (action.type) {
-        
+
         case 'stop':
             return {
                 ...state,
@@ -101,7 +101,7 @@ function reducer(state: pomodoroStateType, action: pomodoroActionType): pomodoro
                     return individualPomodoro;
                 })
             };
-        
+
         case 'start':
             return {
                 ...state,
@@ -126,10 +126,11 @@ function reducer(state: pomodoroStateType, action: pomodoroActionType): pomodoro
                     else return individualPomodoro;
                 })
             };
-        
+
         case 'finish':
             return {
                 ...state,
+                pomodorosFinishedToday: state.pomodorosFinishedToday + 1,
                 pomodorosArray: state.pomodorosArray.map(individualPomodoro => {
                     if (individualPomodoro.id === action.id) {
                         return {
@@ -145,7 +146,7 @@ function reducer(state: pomodoroStateType, action: pomodoroActionType): pomodoro
                     return individualPomodoro;
                 })
             };
-        
+
         default:
             return state;
     }
@@ -162,7 +163,7 @@ export const PomodoroContextWrapper = ({ children }: PomodoroContextWrapperProps
 
     return (
         <PomodoroContext.Provider value={{ pomodoroState, pomodoroDispatch }}>
-            { children }
+            { children}
         </PomodoroContext.Provider>
     )
 }

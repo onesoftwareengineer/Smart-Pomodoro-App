@@ -8,7 +8,7 @@ import type { pomodoroContextType } from './context/pomodorosContext'
 //component
 const App = (): JSX.Element => {
   const { pomodoroState, pomodoroDispatch } = useContext<pomodoroContextType>(PomodoroContext);
-
+  
   return (<>
     {/* header */}
     <div tw="w-full h-10 flex items-center justify-center relative">
@@ -64,7 +64,7 @@ const App = (): JSX.Element => {
       </div>
       <div tw="absolute right-16 bottom-0 text-xs bg-blue-400 text-white py-2 w-48 text-center">
         {/* 12 pomodoro / 3.5 hrs planned */}
-        3 pomodoro / 2 hrs left
+        {pomodoroState.pomodorosPlannedToday - pomodoroState.pomodorosFinishedToday} pomodoros / { (pomodoroState.pomodorosPlannedToday - pomodoroState.pomodorosFinishedToday)/2 } hrs left
       </div>
     </div>
 
@@ -95,7 +95,7 @@ const App = (): JSX.Element => {
 
       <div tw="absolute right-16 top-0 bg-blue-900 text-white text-xs py-2 w-48 text-center">
         {/* start work */}
-        total rewards 75 ron
+        total rewards { pomodoroState.rewardCoinsToday } ron
       </div>
 
     </div>
