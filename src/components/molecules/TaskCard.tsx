@@ -67,7 +67,7 @@ export const Card = ({ individualPomodoro, startPomodoro, stopPomodoro, finishPo
     }
 
     return (
-        <div tw="w-1/5 h-2/5 ml-10 shadow relative" onClick={onClick}>
+        <div tw="w-1/5 h-2/5 ml-10 shadow relative cursor-pointer" onClick={onClick}>
             <div style={{ backgroundImage: `url(${individualPomodoro.imageUrl})`, backgroundSize: "cover", backgroundPosition: "center center" }} tw="h-2/3 w-full" />
             <div tw="bg-blue-400 px-3 text-xs text-white h-1/3 relative flex items-center">
                 {individualPomodoro.runningPomodoroStartedAt !== null && <div css={[linePreloader]}></div>}
