@@ -3,11 +3,11 @@ import { PomodoroContext } from './context/pomodorosContext'
 import tw, { css } from 'twin.macro'
 import logo from './assets/images/logo.png'
 import { Card } from './components/molecules/TaskCard'
-import type { PomodoroContextType } from './context/pomodorosContext'
+import type { pomodoroContextType } from './context/pomodorosContext'
 
 //component
 const App = (): JSX.Element => {
-  const context = useContext<PomodoroContextType>(PomodoroContext);
+  const { pomodoroState, pomodoroDispatch } = useContext<pomodoroContextType>(PomodoroContext);
 
   return (<>
     {/* header */}
@@ -49,18 +49,18 @@ const App = (): JSX.Element => {
     <div tw="w-full h-screen max-h-96 flex justify-center pt-10 relative"
       style={{ backgroundImage: "linear-gradient(to bottom, rgba(208, 230, 255, 0.9), rgba(223, 238, 255, 0.9)), url('https://i.pinimg.com/originals/3b/7f/57/3b7f574e1e03b7bb3d4c7144763678da.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center center" }}>
       <div tw="max-w-5xl w-full flex flex-wrap -ml-20">
-        {(context && context.pomodorosArray) && context.pomodorosArray.map((element, index) => {
+        {(pomodoroState && pomodoroState.pomodorosArray) && pomodoroState.pomodorosArray.map((element, index) => {
           if (element.quantity > 0)
             return (<Card
-            key={element.id}
-            individualPomodoro={element}
-            startPomodoro={context.startPomodoro}
-            stopPomodoro={context.stopPomodoro}
-            finishPomodoro={context.finishPomodoro}
+              key={element.id}
+              individualPomodoro={element}
+              startPomodoro={() => pomodoroDispatch({type: "start", id: element.id})}
+              stopPomodoro={() => pomodoroDispatch({ type: "stop", id: element.id })}
+              finishPomodoro={() => pomodoroDispatch({ type: "finish", id: element.id })}
             />)
           else return null
         }
-          )}
+        )}
       </div>
       <div tw="absolute right-16 bottom-0 text-xs bg-blue-400 text-white py-2 w-48 text-center">
         {/* 12 pomodoro / 3.5 hrs planned */}

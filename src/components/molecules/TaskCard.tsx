@@ -1,12 +1,12 @@
 import tw, { css } from 'twin.macro'
 import React, { useState, useEffect } from 'react'
-import type { IndividualPomodoroType } from '../../context/pomodorosContext'
+import type { individualPomodoroType } from '../../context/pomodorosContext'
 
 //type
 type CardProps =
     React.HTMLAttributes<HTMLElement> &
     {
-        individualPomodoro: IndividualPomodoroType,
+        individualPomodoro: individualPomodoroType,
         startPomodoro: (id: string) => void,
         stopPomodoro: (id: string) => void,
         finishPomodoro: (id: string) => void
