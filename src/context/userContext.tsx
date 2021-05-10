@@ -18,7 +18,7 @@ const userInitialState: userInitialStateType = {
 // user state reducer
 type userActionType = {
   type: string
-  value: number
+  value?: number
 }
 
 const reducer = (state: userInitialStateType, action: userActionType) => {
@@ -29,7 +29,7 @@ const reducer = (state: userInitialStateType, action: userActionType) => {
         soundsAreOn: !state.soundsAreOn,
       }
 
-    case 'tlggle notifications':
+    case 'toggle notifications':
       return {
         ...state,
         notificationsAreOn: !state.notificationsAreOn,
@@ -38,7 +38,7 @@ const reducer = (state: userInitialStateType, action: userActionType) => {
     case 'toggle skinner':
       return {
         ...state,
-        skinnerBosIsOn: !state.skinnerBoxIsOn,
+        skinnerBoxIsOn: !state.skinnerBoxIsOn,
       }
 
     case 'update reward': {
@@ -54,12 +54,12 @@ const reducer = (state: userInitialStateType, action: userActionType) => {
 }
 
 //user state context
-type userContextType = {
+export type userContextType = {
   userState: userInitialStateType
   userDispatch: ({ type, value }: userActionType) => void
 }
 
-const UserContext = createContext<userContextType>({} as userContextType)
+export const UserContext = createContext<userContextType>({} as userContextType)
 
 //user state wrapper component
 type userContextWrapperType = {

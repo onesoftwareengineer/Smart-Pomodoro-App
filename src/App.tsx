@@ -1,15 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { PomodoroContext } from './context/pomodorosContext'
 import tw, { css } from 'twin.macro'
 import logo from './assets/images/logo.png'
 import { Card } from './components/molecules/TaskCard'
 import type { pomodoroContextType } from './context/pomodorosContext'
+import { UserContext } from './context/userContext'
+import type { userContextType } from './context/userContext'
 
 //component
 const App = (): JSX.Element => {
   const { pomodoroState, pomodoroDispatch } = useContext<pomodoroContextType>(
     PomodoroContext,
   )
+  const { userState, userDispatch } = useContext<userContextType>(UserContext)
 
   return (
     <>
@@ -94,7 +97,13 @@ const App = (): JSX.Element => {
       {/* icons and start button */}
       <div tw="bg-white w-full flex justify-center items-center relative">
         <div tw="max-w-5xl w-full flex pt-2 text-xs">
-          <div tw="text-gray-400 flex items-center mr-3">
+          <div
+            css={[
+              tw`flex items-center mr-3 text-gray-200 cursor-pointer select-none`,
+              userState.skinnerBoxIsOn && tw`text-gray-400`,
+            ]}
+            onClick={() => userDispatch({ type: 'toggle skinner' })}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -109,7 +118,14 @@ const App = (): JSX.Element => {
             </svg>
             rewards
           </div>
-          <div tw="text-gray-400 flex items-center mr-3">
+
+          <div
+            css={[
+              tw`flex items-center mr-3 text-gray-200 cursor-pointer select-none`,
+              userState.notificationsAreOn && tw`text-gray-400`,
+            ]}
+            onClick={() => userDispatch({ type: 'toggle notifications' })}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -123,7 +139,14 @@ const App = (): JSX.Element => {
             </svg>
             notifications
           </div>
-          <div tw="text-gray-200 flex items-center mr-3">
+
+          <div
+            css={[
+              tw`flex items-center mr-3 text-gray-200 cursor-pointer select-none`,
+              userState.soundsAreOn && tw`text-gray-400`,
+            ]}
+            onClick={() => userDispatch({ type: 'toggle sounds' })}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
