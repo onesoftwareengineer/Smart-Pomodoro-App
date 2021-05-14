@@ -1,14 +1,14 @@
 import React, { useReducer, createContext } from 'react'
 
 //user initial state
-type userInitialStateType = {
+type userStateType = {
   pomodoroMaxValue: number
   notificationsAreOn: boolean
   soundsAreOn: boolean
   skinnerBoxIsOn: boolean
 }
 
-const userInitialState: userInitialStateType = {
+const initialState: userStateType = {
   pomodoroMaxValue: 4,
   notificationsAreOn: false,
   soundsAreOn: false,
@@ -21,7 +21,7 @@ type userActionType = {
   value?: number
 }
 
-const reducer = (state: userInitialStateType, action: userActionType) => {
+function reducer(state: userStateType, action: userActionType): userStateType {
   switch (action.type) {
     case 'toggle sounds':
       return {
@@ -42,9 +42,13 @@ const reducer = (state: userInitialStateType, action: userActionType) => {
       }
 
     case 'update reward': {
-      return {
-        ...state,
-        pomodoroMaxValue: action.value,
+      if (action.value !== undefined) {
+        return {
+          ...state,
+          pomodoroMaxValue: action.value,
+        }
+      } else {
+        return state
       }
     }
 
@@ -53,15 +57,15 @@ const reducer = (state: userInitialStateType, action: userActionType) => {
   }
 }
 
-//user state context
+// user context
 export type userContextType = {
-  userState: userInitialStateType
+  userState: userStateType
   userDispatch: ({ type, value }: userActionType) => void
 }
 
 export const UserContext = createContext<userContextType>({} as userContextType)
 
-//user state wrapper component
+// user wrapper component
 type userContextWrapperType = {
   children: React.ReactNode
 }
@@ -69,7 +73,7 @@ type userContextWrapperType = {
 export const UserContextWrapper = ({
   children,
 }: userContextWrapperType): JSX.Element => {
-  const [userState, userDispatch] = useReducer(reducer, userInitialState)
+  const [userState, userDispatch] = useReducer(reducer, initialState)
 
   return (
     <UserContext.Provider value={{ userState, userDispatch }}>

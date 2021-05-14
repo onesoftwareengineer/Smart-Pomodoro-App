@@ -1,6 +1,11 @@
 import tw, { css } from 'twin.macro'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import type { individualPomodoroType } from '../../context/pomodorosContext'
+import { UserContext } from '../../context/userContext'
+import applauseSoundUrl from '../../assets/sounds/applause.mp3'
+const applauseSound = new Audio(applauseSoundUrl)
+import clickSoundUrl from '../../assets/sounds/click.mp3'
+const clickSound = new Audio(clickSoundUrl)
 
 //type
 type CardProps = React.HTMLAttributes<HTMLElement> & {
@@ -46,6 +51,8 @@ export const Card = ({
   stopPomodoro,
   finishPomodoro,
 }: CardProps): JSX.Element => {
+  const { userState } = useContext(UserContext)
+
   //timer will count till it reaches over 25 minunes (one pomodoro), after that it calls finishPomodoro
   useEffect(() => {
     if (individualPomodoro.runningPomodoroStartedAt !== null) {
@@ -56,6 +63,9 @@ export const Card = ({
           individualPomodoro.pausedPomodoroMSecondsPassed
         console.log(totalMSecondsPassed)
         if (totalMSecondsPassed > 1 * 5 * 1000) {
+          if (userState.soundsAreOn) {
+            applauseSound.play()
+          }
           finishPomodoro(individualPomodoro.id)
         }
       }, 1000)
@@ -66,6 +76,9 @@ export const Card = ({
   const onClick = () => {
     //if card is clicked and isn't running, start pomodoro
     if (individualPomodoro.runningPomodoroStartedAt === null) {
+      if (userState.soundsAreOn) {
+        clickSound.play()
+      }
       startPomodoro(individualPomodoro.id)
     }
     //if card is clicked and running, it will be stopped

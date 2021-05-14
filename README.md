@@ -41,6 +41,7 @@ rewards (boolean)
 notifications (boolean)
 sound (boolean)
 
+
 //if pomodoro is finished
 
     //a sound is being played if sound is on
@@ -51,4 +52,6 @@ sound (boolean)
     	//if reward is 0 a different notification is being displayed
     	//if reward is different from 0, another notification is displayed
 
-    //deploy app to github pages
+    
+DOING NOW	
+//deploy app to github pages
