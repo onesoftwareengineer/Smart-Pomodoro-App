@@ -1,4 +1,4 @@
-import React from '../../_snowpack/pkg/react.js';
+import React from '../pkg/react.js';
 import { Button } from './Button.js';
 export default {
   title: 'Atomic Design/Atoms/Button',

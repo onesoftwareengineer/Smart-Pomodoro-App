@@ -1,5 +1,5 @@
-import _styled2 from "../../_snowpack/pkg/styled-components.js";
-import { css as _css } from "../../_snowpack/pkg/styled-components.js";
+import _styled2 from "../pkg/styled-components.js";
+import { css as _css } from "../pkg/styled-components.js";
 
 const Button = _styled2.button.withConfig({
   displayName: "Button",

@@ -1,4 +1,4 @@
-import React from '../../_snowpack/pkg/react.js';
+import React from '../pkg/react.js';
 import { Header } from './Header.js';
 export default {
   title: 'Example/Header',
