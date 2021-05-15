@@ -63,6 +63,7 @@ export const Card = ({
           individualPomodoro.pausedPomodoroMSecondsPassed
         console.log(totalMSecondsPassed)
         if (totalMSecondsPassed > 1 * 5 * 1000) {
+          console.log(userState)
           if (userState.soundsAreOn) {
             applauseSound.play()
           }
@@ -71,7 +72,7 @@ export const Card = ({
       }, 1000)
       return () => clearInterval(intervalId)
     }
-  }, [individualPomodoro.runningPomodoroStartedAt])
+  }, [individualPomodoro.runningPomodoroStartedAt, userState])
 
   const onClick = () => {
     //if card is clicked and isn't running, start pomodoro

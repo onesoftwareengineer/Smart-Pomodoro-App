@@ -1,4 +1,8 @@
 {
+  "name": "smart-pomodoro-app",
+  "version": "21.0.0",
+  "private": true,
+  "homepage": "http://onesoftwareengineer.github.io/Smart-Pomodoro-App",
   "babelMacros": {
     "twin": {
       "preset": "styled-components"

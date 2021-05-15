@@ -4,4 +4,9 @@ module.exports = {
   packageOptions: {
     knownEntrypoints: ['styled-components'],
   },
+  buildOptions: {
+    baseUrl: './',
+    metaUrlPath: "dist"
+    /* ... */
+  }
 }
