@@ -1,6 +1,6 @@
 import React from '../pkg/react.js';
 import { Button } from './Button.js';
-import './header.css.proxy.js';
+import './header.css';
 export const Header = ({
   user,
   onLogin,
