@@ -1,6 +1,6 @@
-import _styled2 from "../../_snowpack/pkg/styled-components.js";
-import _styled from "../../_snowpack/pkg/styled-components.js";
-import React from '../../_snowpack/pkg/react.js';
+import _styled2 from "../pkg/styled-components.js";
+import _styled from "../pkg/styled-components.js";
+import React from '../pkg/react.js';
 
 var _StyledA = _styled("a").withConfig({
   displayName: "Logo___StyledA",

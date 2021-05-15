@@ -1,1 +1,1 @@
-export default "/dist/assets/sounds/click.mp3";
+export default "./dist/assets/sounds/click.mp3";
