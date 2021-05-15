@@ -1,4 +1,4 @@
-import React, { useReducer } from '../pkg/react.js';
+import React, { useReducer } from '../../_snowpack/pkg/react.js';
 import { generateSkinnerReward } from '../utils/skinnerbox.js'; //initial state
 
 const initialState = {

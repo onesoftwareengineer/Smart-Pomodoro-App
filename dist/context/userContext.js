@@ -1,4 +1,4 @@
-import React, { useReducer, createContext } from '../pkg/react.js'; //user initial state
+import React, { useReducer, createContext } from '../../_snowpack/pkg/react.js'; //user initial state
 
 const initialState = {
   pomodoroMaxValue: 4,

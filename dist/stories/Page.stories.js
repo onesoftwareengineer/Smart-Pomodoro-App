@@ -1,4 +1,4 @@
-import React from '../pkg/react.js';
+import React from '../../_snowpack/pkg/react.js';
 import { Page } from './Page.js';
 import * as HeaderStories from './Header.stories.js';
 export default {

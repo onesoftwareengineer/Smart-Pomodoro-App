@@ -1,4 +1,4 @@
-import { createGlobalStyle as _globalImport } from "../pkg/styled-components.js";
+import { createGlobalStyle as _globalImport } from "../../_snowpack/pkg/styled-components.js";
 
 const _GlobalStyles = _globalImport`
   *,
@@ -310,8 +310,8 @@ const _GlobalStyles = _globalImport`
   --tw-shadow: 0 0 #0000; }
 `;
 
-import React from '../pkg/react.js';
-import { createGlobalStyle } from '../pkg/styled-components.js';
+import React from '../../_snowpack/pkg/react.js';
+import { createGlobalStyle } from '../../_snowpack/pkg/styled-components.js';
 const CustomStyles = createGlobalStyle`
 	body {
 		-webkit-tap-highlight-color: ${"#8b5cf6"};

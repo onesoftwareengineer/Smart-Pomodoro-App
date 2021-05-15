@@ -1,5 +1,5 @@
-import _styled2 from "../pkg/styled-components.js";
-import { css as _css } from "../pkg/styled-components.js";
+import _styled2 from "../../_snowpack/pkg/styled-components.js";
+import { css as _css } from "../../_snowpack/pkg/styled-components.js";
 
 const Button = _styled2.button.withConfig({
   displayName: "Button",
@@ -9,6 +9,14 @@ const Button = _styled2.button.withConfig({
   isSmall
 }) => [// The common button styles
 {
+  "--tw-translate-x": "0",
+  "--tw-translate-y": "0",
+  "--tw-rotate": "0",
+  "--tw-skew-x": "0",
+  "--tw-skew-y": "0",
+  "--tw-scale-x": "1",
+  "--tw-scale-y": "1",
+  "transform": "translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))",
   "paddingLeft": "2rem",
   "paddingRight": "2rem",
   "paddingTop": "0.5rem",
@@ -18,14 +26,6 @@ const Button = _styled2.button.withConfig({
     "outline": "2px solid transparent",
     "outlineOffset": "2px"
   },
-  "--tw-translate-x": "0",
-  "--tw-translate-y": "0",
-  "--tw-rotate": "0",
-  "--tw-skew-x": "0",
-  "--tw-skew-y": "0",
-  "--tw-scale-x": "1",
-  "--tw-scale-y": "1",
-  "transform": "translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))",
   "transitionDuration": "75ms"
 }, // Use the variant grouping feature to add variants to multiple classes
 {
