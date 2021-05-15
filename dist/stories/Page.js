@@ -1,5 +1,5 @@
 import { Header } from './Header.js';
-import './page.css';
+import './page.css.proxy.js';
 export const Page = ({
   user,
   onLogin,
