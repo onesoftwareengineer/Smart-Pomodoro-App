@@ -314,8 +314,8 @@ import React from '../pkg/react.js';
 import { createGlobalStyle } from '../pkg/styled-components.js';
 const CustomStyles = createGlobalStyle`
 	body {
-		-webkit-tap-highlight-color: ${"#8b5cf6"};
-    ${{
+		//-webkit-tap-highlight-color: ${"#8b5cf6"};
+    //${{
   "WebkitFontSmoothing": "antialiased",
   "MozOsxFontSmoothing": "grayscale"
 }};
