@@ -9,9 +9,8 @@ import type { userContextType } from './context/userContext'
 
 //component
 const App = (): JSX.Element => {
-  const { pomodoroState, pomodoroDispatch } = useContext<pomodoroContextType>(
-    PomodoroContext,
-  )
+  const { pomodoroState, pomodoroDispatch } =
+    useContext<pomodoroContextType>(PomodoroContext)
   const { userState, userDispatch } = useContext<userContextType>(UserContext)
 
   return (

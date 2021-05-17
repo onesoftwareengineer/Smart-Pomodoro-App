@@ -63,10 +63,20 @@ export const Card = ({
           individualPomodoro.pausedPomodoroMSecondsPassed
         console.log(totalMSecondsPassed)
         if (totalMSecondsPassed > 1 * 5 * 1000) {
-          console.log(userState)
+          //if sounds are on, trigger pomodoro finish sound
           if (userState.soundsAreOn) {
             applauseSound.play()
           }
+          //if notifications are on, trigger pomodoro finish notification
+          if (
+            userState.notificationsAreOn &&
+            Notification.permission === 'granted'
+          ) {
+            var notification = new Notification(
+              'All right, you finished yet another Pomodoro! Keep going forward.',
+            )
+          }
+          //update state
           finishPomodoro(individualPomodoro.id)
         }
       }, 1000)
