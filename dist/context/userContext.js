@@ -1,5 +1,6 @@
 import React, { useReducer, createContext } from '../pkg/react.js'; //user initial state
 
+import { jsx as __cssprop } from "../pkg/@emotion/react.js";
 const initialState = {
   pomodoroMaxValue: 4,
   notificationsAreOn: false,
@@ -59,7 +60,7 @@ export const UserContextWrapper = ({
   children
 }) => {
   const [userState, userDispatch] = useReducer(reducer, initialState);
-  return /*#__PURE__*/React.createElement(UserContext.Provider, {
+  return __cssprop(UserContext.Provider, {
     value: {
       userState,
       userDispatch

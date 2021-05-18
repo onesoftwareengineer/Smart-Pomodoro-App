@@ -1,6 +1,7 @@
 import React, { useReducer } from '../pkg/react.js';
 import { generateSkinnerReward } from '../utils/skinnerbox.js'; //initial state
 
+import { jsx as __cssprop } from "../pkg/@emotion/react.js";
 const initialState = {
   pomodorosPlannedToday: 21,
   pomodorosFinishedToday: 0,
@@ -113,7 +114,7 @@ export const PomodoroContextWrapper = ({
   children
 }) => {
   const [pomodoroState, pomodoroDispatch] = useReducer(reducer, initialState);
-  return /*#__PURE__*/React.createElement(PomodoroContext.Provider, {
+  return __cssprop(PomodoroContext.Provider, {
     value: {
       pomodoroState,
       pomodoroDispatch

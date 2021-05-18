@@ -2,6 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import React from '../pkg/react.js';
 import './button.css.proxy.js';
+import { jsx as __cssprop } from "../pkg/@emotion/react.js";
 
 /**
  * Primary UI component for user interaction
@@ -14,7 +15,7 @@ export const Button = ({
   ...props
 }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  return /*#__PURE__*/React.createElement("button", _extends({
+  return __cssprop("button", _extends({
     type: "button",
     className: ['storybook-button', `storybook-button--${size}`, mode].join(' '),
     style: {

@@ -1,6 +1,7 @@
-import { createGlobalStyle as _globalImport } from "../pkg/styled-components.js";
+import { Global as _globalImport } from "../pkg/@emotion/react.js";
 
-const _GlobalStyles = _globalImport`
+const _GlobalStyles = () => __cssprop(_globalImport, {
+  styles: css`
   *,
   *::before,
   *::after {
@@ -308,24 +309,24 @@ const _GlobalStyles = _globalImport`
   }
 * {
   --tw-shadow: 0 0 #0000; }
-`;
+`
+});
 
 import React from '../pkg/react.js';
-import { createGlobalStyle } from '../pkg/styled-components.js';
-const CustomStyles = createGlobalStyle`
-	body {
-		//-webkit-tap-highlight-color: ${"#8b5cf6"};
-    //${{
+import { Global, css } from '../pkg/@emotion/react.js';
+import { jsx as __cssprop } from "../pkg/@emotion/react.js";
+const customStyles = css`
+  body {
+    -webkit-tap-highlight-color: ${"#8b5cf6"};
+    ${{
   "WebkitFontSmoothing": "antialiased",
   "MozOsxFontSmoothing": "grayscale"
-}};
-    ${{
-  "margin": "0px",
-  "padding": "0px"
 }}
-	}
+  }
 `;
 
-const GlobalStyles = () => /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(_GlobalStyles, null), /*#__PURE__*/React.createElement(CustomStyles, null));
+const GlobalStyles = () => __cssprop(React.Fragment, null, __cssprop(_GlobalStyles, null), __cssprop(Global, {
+  styles: customStyles
+}));
 
 export default GlobalStyles;
