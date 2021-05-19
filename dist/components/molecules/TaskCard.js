@@ -98,9 +98,8 @@ export const Card = ({
         individualPomodoro.runningPomodoroStartedAt + individualPomodoro.pausedPomodoroMSecondsPassed;
         console.log(totalMSecondsPassed);
 
-        if (totalMSecondsPassed > 1 * 5 * 1000) {
-          console.log(Notification.permission); //if sounds are on, trigger pomodoro finish sound
-
+        if (totalMSecondsPassed > 25 * 60 * 1000) {
+          //if sounds are on, trigger pomodoro finish sound
           if (userState.soundsAreOn) {
             applauseSound.play();
           } //if notifications are on, trigger pomodoro finish notification
@@ -127,7 +126,7 @@ export const Card = ({
       }
 
       if (userState.notificationsAreOn && Notification.permission === 'granted') {
-        var notification = new Notification(`For the next 25 mins focus on "${individualPomodoro.description}" and only on this.`);
+        var notification = new Notification(`For the next 25 mins focus your mind on "${individualPomodoro.description}".`);
       }
 
       startPomodoro(individualPomodoro.id);
