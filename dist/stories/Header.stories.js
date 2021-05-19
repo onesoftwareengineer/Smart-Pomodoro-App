@@ -1,12 +1,11 @@
 import React from '../pkg/react.js';
 import { Header } from './Header.js';
-import { jsx as __cssprop } from "../pkg/@emotion/react.js";
 export default {
   title: 'Example/Header',
   component: Header
 };
 
-const Template = args => __cssprop(Header, args);
+const Template = args => /*#__PURE__*/React.createElement(Header, args);
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {

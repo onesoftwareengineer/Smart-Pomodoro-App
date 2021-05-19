@@ -1,6 +1,5 @@
 import React from '../pkg/react.js';
 import { Button } from './Button.js';
-import { jsx as __cssprop } from "../pkg/@emotion/react.js";
 export default {
   title: 'Atomic Design/Atoms/Button',
   component: Button,
@@ -11,7 +10,7 @@ export default {
   }
 };
 
-const Template = args => __cssprop(Button, args);
+const Template = args => /*#__PURE__*/React.createElement(Button, args);
 
 export const Primary = Template.bind({});
 Primary.args = {

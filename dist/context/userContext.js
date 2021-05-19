@@ -1,6 +1,5 @@
 import React, { useReducer, createContext } from '../pkg/react.js'; //user initial state
 
-import { jsx as __cssprop } from "../pkg/@emotion/react.js";
 const initialState = {
   pomodoroMaxValue: 4,
   notificationsAreOn: false,
@@ -16,21 +15,14 @@ function reducer(state, action) {
       };
 
     case 'toggle notifications':
-      //if user wants to turn notifications on and he didn't allow these to run he is prompted with request to turn these on
+      //if user toggles notifications on and he didn't allow these, he is prompted with request to turn these on
       if (state.notificationsAreOn === false && Notification.permission !== 'granted') {
-        Notification.requestPermission().then(function (permission) {
-          //if he turn them on, then notifications will also be turned on in the app
-          if (permission === 'granted') {
-            return { ...state,
-              notificationsAreOn: !state.notificationsAreOn
-            }; //if he doesn't turn these on, then notifications will remain off
-          } else return state;
-        });
-      } else {
-        return { ...state,
-          notificationsAreOn: !state.notificationsAreOn
-        };
+        Notification.requestPermission();
       }
+
+      return { ...state,
+        notificationsAreOn: !state.notificationsAreOn
+      };
 
     case 'toggle skinner':
       return { ...state,
@@ -60,7 +52,7 @@ export const UserContextWrapper = ({
   children
 }) => {
   const [userState, userDispatch] = useReducer(reducer, initialState);
-  return __cssprop(UserContext.Provider, {
+  return /*#__PURE__*/React.createElement(UserContext.Provider, {
     value: {
       userState,
       userDispatch
