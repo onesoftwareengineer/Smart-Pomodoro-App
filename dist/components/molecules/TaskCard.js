@@ -125,6 +125,10 @@ export const Card = ({
         clickSound.play();
       }
 
+      if (userState.notificationsAreOn && Notification.permission === 'granted') {
+        var notification = new Notification(`For the next 25 mins focus on "${individualPomodoro.description}" and only on this.`);
+      }
+
       startPomodoro(individualPomodoro.id);
     } //if card is clicked and running, it will be stopped
     else if (individualPomodoro.runningPomodoroStartedAt !== null) {
