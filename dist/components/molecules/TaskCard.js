@@ -96,7 +96,7 @@ export const Card = ({
         const totalMSecondsPassed = //@ts-ignore
         new Date() - //@ts-ignore
         individualPomodoro.runningPomodoroStartedAt + individualPomodoro.pausedPomodoroMSecondsPassed;
-        console.log(totalMSecondsPassed);
+        console.log(totalMSecondsPassed / 1000 / 60);
 
         if (totalMSecondsPassed > 25 * 60 * 1000) {
           //if sounds are on, trigger pomodoro finish sound
