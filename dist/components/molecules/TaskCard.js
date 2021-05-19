@@ -119,7 +119,8 @@ export const Card = ({
   }, [individualPomodoro.runningPomodoroStartedAt, userState]);
 
   const onClick = () => {
-    //if card is clicked and isn't running, start pomodoro
+    console.log(individualPomodoro, Notification.permission); //if card is clicked and isn't running, start pomodoro
+
     if (individualPomodoro.runningPomodoroStartedAt === null) {
       if (userState.soundsAreOn) {
         clickSound.play();
