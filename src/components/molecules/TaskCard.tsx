@@ -62,7 +62,7 @@ export const Card = ({
           individualPomodoro.runningPomodoroStartedAt +
           individualPomodoro.pausedPomodoroMSecondsPassed
         console.log(totalMSecondsPassed)
-        if (totalMSecondsPassed > 1 * 5 * 1000) {
+        if (totalMSecondsPassed > 25 * 60 * 1000) {
           //if sounds are on, trigger pomodoro finish sound
           if (userState.soundsAreOn) {
             applauseSound.play()
@@ -85,10 +85,19 @@ export const Card = ({
   }, [individualPomodoro.runningPomodoroStartedAt, userState])
 
   const onClick = () => {
+    console.log(individualPomodoro, Notification.permission)
     //if card is clicked and isn't running, start pomodoro
     if (individualPomodoro.runningPomodoroStartedAt === null) {
       if (userState.soundsAreOn) {
         clickSound.play()
+      }
+      if (
+        userState.notificationsAreOn &&
+        Notification.permission === 'granted'
+      ) {
+        var notification = new Notification(
+          `For the next 25 mins focus your mind on "${individualPomodoro.description}".`,
+        )
       }
       startPomodoro(individualPomodoro.id)
     }
